@@ -1,0 +1,26 @@
+<img id="slider" src="завантаження.jpg" width="250">
+<button onclick="nextPhoto()">Далі</button>
+
+<script>
+    // Список усіх зображень у масиві
+    const photos = [
+        "завантаження.jpg",
+        "завантаження(1).jpg",
+        "завантаження (2).jpg"
+    ];
+    
+    let currentIndex = 0;
+
+    function nextPhoto() {
+        // Збільшуємо індекс
+        currentIndex++;
+
+        // Якщо дійшли до кінця списку — повертаємось на початок
+        if (currentIndex >= photos.length) {
+            currentIndex = 0;
+        }
+
+        // Оновлюємо картинку одним рядком
+        document.getElementById("slider").src = photos[currentIndex];
+    }
+</script>
